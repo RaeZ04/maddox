@@ -5,7 +5,7 @@
 
 
 # 1. WHAT IS MADDOX?
-=====================================
+
 
 Maddox is a pentesting assistant that uses Google Gemini 2.5 Flash through
 the Google AI API (OpenAI-compatible endpoint). It features an extremely
@@ -19,7 +19,7 @@ Storage: ~/.maddox/ (sessions, targets, timeline, files, notes, reports)
 
 
 # 2. REQUIREMENTS
-=====================================
+
 
 - Python 3.8 or higher
 - openai package: pip install openai
@@ -34,7 +34,6 @@ Python Dependencies (all stdlib except openai):
 
 
 # 3. HOW TO GET AND CONFIGURE API KEYS
-=====================================
 
 Maddox uses Google's Gemini 2.5 Flash model, which requires an API key
 from Google AI Studio. The service offers a generous free tier.
@@ -65,7 +64,6 @@ will manage them automatically.
 
 
 # 4. CONFIGURATION SETTINGS
-=====================================
 
 Edit the constants at the top of maddox.py if needed:
 
@@ -86,7 +84,6 @@ Edit the constants at the top of maddox.py if needed:
 
 
 # 5. USAGE MODES
-=====================================
 
   maddox                          Interactive chat
   maddox <IP>                     Chat with preconfigured target IP
@@ -98,7 +95,6 @@ Edit the constants at the top of maddox.py if needed:
 
   
 # 6. SLASH COMMANDS
-=====================================
 
 All commands have multiple aliases so you can type naturally. Here are
 the main ones with their aliases:
@@ -141,7 +137,6 @@ MODES:
 
 
 # 7. SMART DETECTION (NATURAL LANGUAGE)
-=====================================
 
 You don't have to use /commands. Maddox understands natural language,
 including first-person phrasing, questions, requests, and slang:
@@ -205,7 +200,6 @@ SESSION MANAGEMENT (first person):
 
 
 # 8. MULTILINE INPUT (PASTE)
-=====================================
 
 Maddox automatically detects if you paste multiline text (Ctrl+Shift+V in
 most terminals). It uses select() with a 200ms timeout to capture all lines
@@ -223,7 +217,6 @@ It will display how many lines and chars were captured.
 
 
 # 9. TARGETS MEMORY
-=====================================
 
 Each target IP has a persistent JSON file in ~/.maddox/targets/.
 It automatically updates with each analysis:
@@ -243,7 +236,6 @@ before, all previous data is loaded automatically.
 
 
 # 10. STEALTH MODE
-=====================================
 
 Activate with /stealth. Modifies the system prompt so ALL suggested
 commands prioritize stealth:
@@ -261,7 +253,6 @@ The stealth state is saved in sessions and restored upon loading.
 
 
 # 11. CONTEXT MANAGEMENT
-=====================================
 
 Gemini 2.5 Flash has 1M context tokens. Maddox manages it like this:
 
@@ -286,7 +277,6 @@ Temperatures used:
 
 
 # 12. FLAG VALIDATOR (ANTI-HALLUCINATION)
-=====================================
 
 AI sometimes hallucinates non-existent flags. Maddox mitigates this:
 
@@ -308,7 +298,6 @@ Caches --help to avoid re-executing. 30+ tools supported.
 
 
 # 13. SESSIONS
-=====================================
 
 Saved in ~/.maddox/sesiones/ as JSON. Include:
   - Timestamp
@@ -323,7 +312,6 @@ Restores IP, stealth mode, and compressed context.
 
 
 # 14. REPORTS
-=====================================
 
 /report generates a professional Markdown document with:
   - General info (date, IP, scope)
@@ -340,7 +328,6 @@ Saved as ~/.maddox/reporte_<ip>_<timestamp>.md
 
 
 # 15. TIMELINE
-=====================================
 
 Automatic chronology of all your actions per target:
   - Scans executed
@@ -355,7 +342,6 @@ View with /timeline. Saved in ~/.maddox/timeline/
 
 
 # 16. FILE GENERATION & READING
-=====================================
 
 GENERATION:
 You can ask Maddox to create files:
@@ -375,7 +361,6 @@ detects binary files, blocks /dev, /proc, /sys.
 
 
 # 17. SMART PARSERS
-=====================================
 
 Maddox auto-detects the tool that generated output and applies a
 specialized parser. 30+ tools supported including:
@@ -388,7 +373,6 @@ and generates a consolidated final summary.
 
 
 # 18. ERROR HANDLING
-=====================================
 
   - Automatic retries with delay
   - Health check if all retries fail
@@ -399,7 +383,6 @@ and generates a consolidated final summary.
 
 
 # 19. FILE STRUCTURE
-=====================================
 
   ~/.maddox/
   ├── sesiones/           Saved sessions (JSON)
@@ -415,7 +398,6 @@ and generates a consolidated final summary.
 
 
 # 20. NETWORK REQUIREMENTS
-=====================================
 
 Maddox uses Google Gemini 2.5 Flash via the Google AI API.
 The model runs on Google servers, so you only need a stable connection.
@@ -439,7 +421,6 @@ LATENCY:
 
 
 # 21. TIPS AND BEST PRACTICES
-=====================================
 
   - Speak to Maddox like a person: it understands natural phrasing.
   - Set the IP target at the start (/ip or "the target is X.X.X.X").
@@ -453,7 +434,6 @@ LATENCY:
 
 
 # 22. CHANGELOG
-=====================================
 
 v4.5 (current):
   + AUTONOMOUS SCANNING: "analyze this ip" -> auto nmap execution

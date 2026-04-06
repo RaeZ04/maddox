@@ -8,7 +8,7 @@
 
 VERSION = "4.5"
 
-import omaddox
+import openai 
 import sys
 import re
 import os
@@ -31,7 +31,7 @@ from pathlib import Path
 from datetime import datetime
 
 # ─────────────────────────── CONFIG ───────────────────────────
-GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/omaddox/"
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 # === API KEYS (anade todas las que tengas, una por cuenta de Google) ===
 # MADDOX rotara automaticamente a la siguiente cuando una se quede sin cuota.
@@ -151,7 +151,7 @@ class KeyManager:
         self.client = self._crear_cliente()
 
     def _crear_cliente(self):
-        return omaddox.OpenAI(base_url=self.base_url, api_key=self.key_actual)
+        return openai.OpenAI(base_url=self.base_url, api_key=self.key_actual)
 
     @property
     def key_actual(self):

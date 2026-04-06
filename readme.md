@@ -3,7 +3,6 @@
 ║  Ethical Hacking Assistant with Google Gemini 2.5 Flash      ║
 ╚══════════════════════════════════════════════════════════════╝
 
-=====================================
 1. WHAT IS MADDOX?
 =====================================
 
@@ -17,7 +16,6 @@ Single script: maddox.py (~6450 lines, Python 3.8+)
 Storage: ~/.maddox/ (sessions, targets, timeline, files, notes, reports)
 
 
-=====================================
 2. REQUIREMENTS
 =====================================
 
@@ -33,7 +31,6 @@ Python Dependencies (all stdlib except openai):
   fcntl, pathlib, datetime, signal
 
 
-=====================================
 3. HOW TO GET AND CONFIGURE API KEYS
 =====================================
 
@@ -64,7 +61,6 @@ You can add as many keys as you want (one per Google account). Maddox
 will manage them automatically.
 
 
-=====================================
 4. CONFIGURATION SETTINGS
 =====================================
 
@@ -85,7 +81,6 @@ Edit the constants at the top of maddox.py if needed:
   RPD_AHORRO_CRITICO      Threshold to save tokens (default: 3)
 
 
-=====================================
 5. USAGE MODES
 =====================================
 
@@ -97,7 +92,6 @@ Edit the constants at the top of maddox.py if needed:
   nmap -sCV 10.10.10.1 | maddox   Analyze direct output via pipe
 
 
-=====================================
 6. SLASH COMMANDS
 =====================================
 
@@ -140,7 +134,6 @@ MODES:
   /exit (/salir /quit /q /bye /adios)           Exit
 
 
-=====================================
 7. SMART DETECTION (NATURAL LANGUAGE)
 =====================================
 
@@ -204,7 +197,6 @@ SESSION MANAGEMENT (first person):
   "what have I done so far?"             -> Shows timeline
 
 
-=====================================
 8. MULTILINE INPUT (PASTE)
 =====================================
 
@@ -222,7 +214,6 @@ If auto-detection fails, use the manual mode:
 It will display how many lines and chars were captured.
 
 
-=====================================
 9. TARGETS MEMORY
 =====================================
 
@@ -242,7 +233,6 @@ Data persists across sessions. When setting an IP that was analyzed
 before, all previous data is loaded automatically.
 
 
-=====================================
 10. STEALTH MODE
 =====================================
 
@@ -260,7 +250,6 @@ commands prioritize stealth:
 The stealth state is saved in sessions and restored upon loading.
 
 
-=====================================
 11. CONTEXT MANAGEMENT
 =====================================
 
@@ -285,7 +274,6 @@ Temperatures used:
   0.3  Interactive chat (default)
 
 
-=====================================
 12. FLAG VALIDATOR (ANTI-HALLUCINATION)
 =====================================
 
@@ -307,7 +295,6 @@ AI sometimes hallucinates non-existent flags. Maddox mitigates this:
 Caches --help to avoid re-executing. 30+ tools supported.
 
 
-=====================================
 13. SESSIONS
 =====================================
 
@@ -322,7 +309,6 @@ Auto-saves upon exit. List with /sessions, load with /load <number>.
 Restores IP, stealth mode, and compressed context.
 
 
-=====================================
 14. REPORTS
 =====================================
 
@@ -339,7 +325,6 @@ Restores IP, stealth mode, and compressed context.
 Saved as ~/.maddox/reporte_<ip>_<timestamp>.md
 
 
-=====================================
 15. TIMELINE
 =====================================
 
@@ -354,7 +339,6 @@ Automatic chronology of all your actions per target:
 View with /timeline. Saved in ~/.maddox/timeline/
 
 
-=====================================
 16. FILE GENERATION & READING
 =====================================
 
@@ -374,7 +358,6 @@ Security measures: max 5 files per response, truncates at 100KB,
 detects binary files, blocks /dev, /proc, /sys.
 
 
-=====================================
 17. SMART PARSERS
 =====================================
 
@@ -387,7 +370,6 @@ For large files, it uses automatic chunking: splits, analyzes each part,
 and generates a consolidated final summary.
 
 
-=====================================
 18. ERROR HANDLING
 =====================================
 
@@ -398,7 +380,6 @@ and generates a consolidated final summary.
   - Graceful exit on SIGTERM with auto-save
 
 
-=====================================
 19. FILE STRUCTURE
 =====================================
 
@@ -414,7 +395,6 @@ and generates a consolidated final summary.
   maddox.py               Main script (~6450 lines)
 
 
-=====================================
 20. NETWORK REQUIREMENTS
 =====================================
 
@@ -438,7 +418,6 @@ LATENCY:
   - Mobile/VPN: 200-500ms
 
 
-=====================================
 21. TIPS AND BEST PRACTICES
 =====================================
 
@@ -452,7 +431,6 @@ LATENCY:
   - Run /context periodically to check your token usage.
 
 
-=====================================
 22. CHANGELOG
 =====================================
 

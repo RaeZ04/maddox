@@ -148,6 +148,9 @@ COMMAND EXECUTION:
   "nmap -sS 10.10.10.5"                  -> Detects and executes directly
   "throw nikto against the server"        -> Executes nikto
 
+  <img width="1686" height="782" alt="nmap" src="https://github.com/user-attachments/assets/b20b4121-14d9-4f16-b99d-3f66b4049b21" />
+
+
 FILE ANALYSIS:
   "analyze /tmp/scan.txt"                 -> Loads and analyzes
   "what's in results.xml"                -> Loads and analyzes

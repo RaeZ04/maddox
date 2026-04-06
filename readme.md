@@ -16,6 +16,7 @@ and can execute commands directly from the chat.
 Single script: maddox.py (~6450 lines, Python 3.8+)
 Storage: ~/.maddox/ (sessions, targets, timeline, files, notes, reports)
 
+<img width="571" height="393" alt="img1" src="https://github.com/user-attachments/assets/990c7424-646f-4eb4-b1ae-ccf956f5e242" />
 
 
 # 2. REQUIREMENTS

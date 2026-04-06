@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.maddox/
+targets/
+timeline/
+sesiones/
+cache/
+files/
+.env
+.readline_history*

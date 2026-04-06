@@ -1,7 +1,6 @@
-╔══════════════════════════════════════════════════════════════╗
-║  Maddox v4.5 — Complete Documentation                        ║
-║  Ethical Hacking Assistant with Google Gemini 2.5 Flash      ║
-╚══════════════════════════════════════════════════════════════╝
+
+  Maddox v4.5 — Complete Documentation                       
+  Ethical Hacking Assistant with Google Gemini 2.5 Flash      
 
 
 # 1. WHAT IS MADDOX?

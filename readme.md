@@ -3,7 +3,8 @@
 ║  Ethical Hacking Assistant with Google Gemini 2.5 Flash      ║
 ╚══════════════════════════════════════════════════════════════╝
 
-1. WHAT IS MADDOX?
+
+# 1. WHAT IS MADDOX?
 =====================================
 
 Maddox is a pentesting assistant that uses Google Gemini 2.5 Flash through
@@ -16,7 +17,8 @@ Single script: maddox.py (~6450 lines, Python 3.8+)
 Storage: ~/.maddox/ (sessions, targets, timeline, files, notes, reports)
 
 
-2. REQUIREMENTS
+
+# 2. REQUIREMENTS
 =====================================
 
 - Python 3.8 or higher
@@ -31,7 +33,7 @@ Python Dependencies (all stdlib except openai):
   fcntl, pathlib, datetime, signal
 
 
-3. HOW TO GET AND CONFIGURE API KEYS
+# 3. HOW TO GET AND CONFIGURE API KEYS
 =====================================
 
 Maddox uses Google's Gemini 2.5 Flash model, which requires an API key
@@ -61,7 +63,8 @@ You can add as many keys as you want (one per Google account). Maddox
 will manage them automatically.
 
 
-4. CONFIGURATION SETTINGS
+
+# 4. CONFIGURATION SETTINGS
 =====================================
 
 Edit the constants at the top of maddox.py if needed:
@@ -81,7 +84,8 @@ Edit the constants at the top of maddox.py if needed:
   RPD_AHORRO_CRITICO      Threshold to save tokens (default: 3)
 
 
-5. USAGE MODES
+
+# 5. USAGE MODES
 =====================================
 
   maddox                          Interactive chat
@@ -92,7 +96,8 @@ Edit the constants at the top of maddox.py if needed:
   nmap -sCV 10.10.10.1 | maddox   Analyze direct output via pipe
 
 
-6. SLASH COMMANDS
+  
+# 6. SLASH COMMANDS
 =====================================
 
 All commands have multiple aliases so you can type naturally. Here are
@@ -134,7 +139,8 @@ MODES:
   /exit (/salir /quit /q /bye /adios)           Exit
 
 
-7. SMART DETECTION (NATURAL LANGUAGE)
+
+# 7. SMART DETECTION (NATURAL LANGUAGE)
 =====================================
 
 You don't have to use /commands. Maddox understands natural language,
@@ -197,7 +203,8 @@ SESSION MANAGEMENT (first person):
   "what have I done so far?"             -> Shows timeline
 
 
-8. MULTILINE INPUT (PASTE)
+
+# 8. MULTILINE INPUT (PASTE)
 =====================================
 
 Maddox automatically detects if you paste multiline text (Ctrl+Shift+V in
@@ -214,7 +221,8 @@ If auto-detection fails, use the manual mode:
 It will display how many lines and chars were captured.
 
 
-9. TARGETS MEMORY
+
+# 9. TARGETS MEMORY
 =====================================
 
 Each target IP has a persistent JSON file in ~/.maddox/targets/.
@@ -233,7 +241,8 @@ Data persists across sessions. When setting an IP that was analyzed
 before, all previous data is loaded automatically.
 
 
-10. STEALTH MODE
+
+# 10. STEALTH MODE
 =====================================
 
 Activate with /stealth. Modifies the system prompt so ALL suggested
@@ -250,7 +259,8 @@ commands prioritize stealth:
 The stealth state is saved in sessions and restored upon loading.
 
 
-11. CONTEXT MANAGEMENT
+
+# 11. CONTEXT MANAGEMENT
 =====================================
 
 Gemini 2.5 Flash has 1M context tokens. Maddox manages it like this:
@@ -274,7 +284,8 @@ Temperatures used:
   0.3  Interactive chat (default)
 
 
-12. FLAG VALIDATOR (ANTI-HALLUCINATION)
+
+# 12. FLAG VALIDATOR (ANTI-HALLUCINATION)
 =====================================
 
 AI sometimes hallucinates non-existent flags. Maddox mitigates this:
@@ -295,7 +306,8 @@ AI sometimes hallucinates non-existent flags. Maddox mitigates this:
 Caches --help to avoid re-executing. 30+ tools supported.
 
 
-13. SESSIONS
+
+# 13. SESSIONS
 =====================================
 
 Saved in ~/.maddox/sesiones/ as JSON. Include:
@@ -309,7 +321,8 @@ Auto-saves upon exit. List with /sessions, load with /load <number>.
 Restores IP, stealth mode, and compressed context.
 
 
-14. REPORTS
+
+# 14. REPORTS
 =====================================
 
 /report generates a professional Markdown document with:
@@ -325,7 +338,8 @@ Restores IP, stealth mode, and compressed context.
 Saved as ~/.maddox/reporte_<ip>_<timestamp>.md
 
 
-15. TIMELINE
+
+# 15. TIMELINE
 =====================================
 
 Automatic chronology of all your actions per target:
@@ -339,7 +353,8 @@ Automatic chronology of all your actions per target:
 View with /timeline. Saved in ~/.maddox/timeline/
 
 
-16. FILE GENERATION & READING
+
+# 16. FILE GENERATION & READING
 =====================================
 
 GENERATION:
@@ -358,7 +373,8 @@ Security measures: max 5 files per response, truncates at 100KB,
 detects binary files, blocks /dev, /proc, /sys.
 
 
-17. SMART PARSERS
+
+# 17. SMART PARSERS
 =====================================
 
 Maddox auto-detects the tool that generated output and applies a
@@ -370,7 +386,8 @@ For large files, it uses automatic chunking: splits, analyzes each part,
 and generates a consolidated final summary.
 
 
-18. ERROR HANDLING
+
+# 18. ERROR HANDLING
 =====================================
 
   - Automatic retries with delay
@@ -380,7 +397,8 @@ and generates a consolidated final summary.
   - Graceful exit on SIGTERM with auto-save
 
 
-19. FILE STRUCTURE
+
+# 19. FILE STRUCTURE
 =====================================
 
   ~/.maddox/
@@ -395,7 +413,8 @@ and generates a consolidated final summary.
   maddox.py               Main script (~6450 lines)
 
 
-20. NETWORK REQUIREMENTS
+
+# 20. NETWORK REQUIREMENTS
 =====================================
 
 Maddox uses Google Gemini 2.5 Flash via the Google AI API.
@@ -418,7 +437,8 @@ LATENCY:
   - Mobile/VPN: 200-500ms
 
 
-21. TIPS AND BEST PRACTICES
+
+# 21. TIPS AND BEST PRACTICES
 =====================================
 
   - Speak to Maddox like a person: it understands natural phrasing.
@@ -431,7 +451,8 @@ LATENCY:
   - Run /context periodically to check your token usage.
 
 
-22. CHANGELOG
+
+# 22. CHANGELOG
 =====================================
 
 v4.5 (current):

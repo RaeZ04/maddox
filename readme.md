@@ -1,8 +1,10 @@
+<img width="396" height="241" alt="Screenshot_2026-04-07_235308-removebg-preview" src="https://github.com/user-attachments/assets/9608d3f4-a194-4320-9b25-d6143d0afb74" />
+
+
 
   Maddox v4.5 — Complete Documentation                       
   Ethical Hacking Assistant with Google Gemini 2.5 Flash      
 
-<img width="396" height="241" alt="Screenshot_2026-04-07_235308-removebg-preview" src="https://github.com/user-attachments/assets/9608d3f4-a194-4320-9b25-d6143d0afb74" />
 
 
 # 1. WHAT IS MADDOX?
